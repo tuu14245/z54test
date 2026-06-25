@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+       .footer-image {
+            position: fixed;
+            left: 0;
+            bottom: -250px;
+            width: 100vw;
+            max-height: calc(135vh - 255px);
+            object-fit: contain;
+            z-index: 4;
+            pointer-events: none;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: transparent;
+            z-index: 10;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+        }
+
+        /* Увеличиваем кликабельную зону для логотипа на мобильных устройствах */
+        .logo a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 5px;
+        }
+
+        .logo img {
+            height: 40px;
+            display: block;
+            object-fit: contain;
+        }
+
+        .center-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -85%);
+            text-align: center;
+            color: black;
+            z-index: 5;
+            padding: 0 20px;
+            max-width: 900px;
+            width: 80%;
+            box-sizing: border-box;
+        }
+
+        /* Заменили h3 на .about-text с полным сохранением всех исходных стилей */
+        .center-content .about-text {
+            display: block;
+            width: 570px;
+            margin: 6px auto;
+            font-size: 2.1rem;
+            font-weight: 400;
+
+            text-align: justify;
+            overflow-wrap: break-word;
+        }
+
+        .center-content h1 {
+            margin: 24px 0px 32px;
+            font-size: 3.5rem;
+            line-height: 1.1;
+        }
+
+        .center-content .about-text:first-of-type {
+            margin-top: 35px;
+        }
+
+        .center-content .about-text:last-of-type {
+            margin-bottom: 10px;
+        }
+
+        .center-content h1:last-of-type {
+            margin-top: 32px;
+        }
+
+
+
+
+        /* Адаптация только для телефонов */
+        @media (max-width: 600px) {
+
+            /* Разрешаем скролл при нехватке места на мобильных экранах */
+            html, body {
+                overflow: auto;
+            }
+
+            header {
+                padding: 0 15px;
+            }
+
+
+            .logo img {
+                height: 32px;
+            }
+
+
+            .center-content {
+                width: 90%;
+                padding: 0;
+                transform: translate(-50%, -65%);
+            }
+
+
+            .center-content h1 {
+                font-size: 2.2rem;
+            }
+
+
+            .center-content .about-text {
+                width: 100%;
+                font-size: 1.15rem;
+                text-align: center;
+            }
+
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <img class="footer-image" src="img1.jpg" alt="">
+
+
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="На главную">
+                <img src="img2.jpg" alt="Логотип">
+            </a>
+        </div>
+    </header>
+
+
+    <main class="center-content">
+
+        <h1>Про нашу команду</h1>
+
+        <p class="about-text">
+            Мы — целеустремленная команда, где важны взаимопонимание и полная отдача в каждом матче.
+        </p>
+
+        <p class="about-text">
+            Мы нацелены на результат, поддерживаем друг друга и растем вместе в каждой игре.
+        </p>
+
+        <p class="about-text">
+            (переход на главную по логотипу)
+        </p>
+
+    </main>
+
+</body>
+</html>
