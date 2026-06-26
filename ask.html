@@ -16,12 +16,13 @@
        .footer-image {
             position: fixed;
             left: 0;
-            bottom: -250px;
+            bottom: -300px;
             width: 100vw;
-            max-height: calc(135vh - 255px);
+            max-height: calc(175vh - 295px);
             object-fit: contain;
             z-index: 4;
             pointer-events: none;
+            opacity: 0.9;   
         }
 
         header {
@@ -243,22 +244,27 @@
 
             <div class="question">
                 <label function="q1">Какое звание?</label>
-                <textarea id="q1" name="q1" placeholder="Минимум трипл элита"></textarea>
+                <textarea id="q1" name="q1" placeholder="Трипл элита +"></textarea>
+            </div>
+            
+            <div class="question">
+                <label function="q2">Сколько часов в игре?</label>
+                <textarea id="q2" name="q2" placeholder="400+"></textarea>
             </div>
 
             <div class="question">
-                <label function="q2">Какой возраст?</label>
-                <textarea id="q2" name="q2" placeholder="15+"></textarea>
+                <label function="q3">Какой возраст?</label>
+                <textarea id="q3" name="q3" placeholder="15+"></textarea>
             </div>
 
             <div class="question">
-                <label function="q3">Сколько времени в игре?</label>
-                <textarea id="q3" name="q3" placeholder="400+"></textarea>
+                <label function="q4">Время активности?</label>
+                <textarea id="q4" name="q4" placeholder="Рекомендуется 16-22"></textarea>
             </div>
 
             <div class="question">
-                <label function="q4">Время актива (со ... до ...)?</label>
-                <textarea id="q4" name="q4" placeholder="В пределах 16-22"></textarea>
+                <label function="q5">Как с вами связаться?</label>
+                <textarea id="q5" name="q5" placeholder="Ваш Telegram, Discord, другое"></textarea>
             </div>
 
             <button class="submit-btn" onclick="checkForm()">
@@ -275,7 +281,8 @@
             document.getElementById('q1'),
             document.getElementById('q2'),
             document.getElementById('q3'),
-            document.getElementById('q4')
+            document.getElementById('q4'),
+            document.getElementById('q5'),
         ];
 
         let allFilled = true;
