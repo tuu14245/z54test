@@ -5,24 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about</title>
     <style>
-        html, body {
+        body {
             margin: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
             font-family: Arial, sans-serif;
-        }
-
-       .footer-image {
-            position: fixed;
-            left: 0;
-            bottom: -300px;
-            width: 100vw;
-            max-height: calc(175vh - 295px);
-            object-fit: contain;
-            z-index: 4;
-            pointer-events: none;
-            opacity: 0.9;
+            background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 45%, rgba(255,255,255,0.0) 100%),
+                        url("img1.jpg") center bottom / cover no-repeat;
+            background-attachment: fixed;
         }
 
         header {
@@ -48,7 +39,6 @@
             height: 60px;
         }
 
-        /* Увеличиваем кликабельную зону для логотипа на мобильных устройствах */
         .logo a {
             display: flex;
             align-items: center;
@@ -76,7 +66,6 @@
             box-sizing: border-box;
         }
 
-        /* Заменили h3 на .about-text с полным сохранением всех исходных стилей */
         .center-content .about-text {
             display: block;
             width: 570px;
@@ -109,10 +98,8 @@
 
 
 
-        /* Адаптация только для телефонов */
         @media (max-width: 600px) {
 
-            /* Разрешаем скролл при нехватке места на мобильных экранах */
             html, body {
                 overflow: auto;
             }
@@ -151,9 +138,6 @@
     </style>
 </head>
 <body>
-
-    <img class="footer-image" src="img1.jpg" alt="">
-
 
     <header>
         <div class="logo">
